@@ -32,7 +32,7 @@ src/
   ├── data/                 
       ├── products.ts      
       
-# 🚨Este projeto não usa uma API externa! Os produtos são carregados de um arquivo estático products.ts.
+🚨Este projeto não usa uma API externa! Os produtos são carregados de um arquivo estático products.ts.
 
 ## 🛠️ Como Rodar o Projeto
 Siga os passos abaixo para rodar o projeto localmente:
