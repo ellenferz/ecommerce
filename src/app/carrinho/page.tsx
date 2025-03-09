@@ -11,7 +11,7 @@ const CarrinhoPage = () => {
   if (cart.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center h-screen">
-        <p className="text-xl font-semibold text-gray-600">Seu carrinho está vazio.</p>
+        <p className="text-xl font-semibold text-gray-600">Sua sacola está vazia.</p>
       </div>
     );
   }
