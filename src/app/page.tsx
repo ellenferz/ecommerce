@@ -92,7 +92,7 @@ export default function Home() {
               onClick={() => handleAddToCart(selectedProduct)}
               className="mt-2 bg-amber-700 text-white px-4 py-2 rounded-md w-full hover:bg-amber-800 transition"
             >
-              Adicionar ao Carrinho
+              Adicionar à Sacola
             </button>
           </div>
         </div>
