@@ -20,9 +20,16 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+footer {
+  background-color: rgb(205, 92, 92);
+}
 
 main { 
   margin-top: 60px;
+}
+
+.relative-group {
+  background-color: rgb(205, 92, 92);
 }
 
 :root {

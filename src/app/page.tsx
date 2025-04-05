@@ -10,11 +10,12 @@ import { Navigation } from "swiper/modules";
 import { useCart } from "@/context/CartContext";
 
 const banners = [
-  { id: 1, image: "/images/banner-1.jpeg", alt: "Promoção Especial" },
-  { id: 2, image: "/images/banner-2.jpeg", alt: "Descontos Imperdíveis" },
+  { id: 1, image: "/images/banner-1.jpeg", alt: "Banner-1" },
+  { id: 2, image: "/images/banner-2.jpeg", alt: "Banner-2" },
 ];
 
 export default function Home() {
+
   const { addToCart } = useCart();
   const [selectedProduct, setSelectedProduct] = useState<{
     id: number;
@@ -59,13 +60,13 @@ export default function Home() {
               alt={product.name}
               width={300}
               height={300}
-              className="w-full h-95 object-cover rounded-md transition-transform duration-300 group-hover:scale-95"
+              className="w-full h- object-cover rounded-md transition-transform duration-300 group-hover:scale-95"
             />
             <div className="p-4">
               <h2 className="text-xl font-semibold">{product.name}</h2>
               <p className="text-gray-600 mt-2">R$ {product.price.toFixed(2)}</p>
             </div>
-            <div className="absolute bottom-25 left-8 w-70  bg-amber-800/50 text-white text-sm text-center py-2 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-md">
+            <div className="absolute bottom-25 w-full h-7 bg-amber-800/50 text-white text-sm text-center py-2 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-md">
               <p className="text-white text-lg font-medium">Ver mais detalhes</p>
             </div>
           </div>
@@ -73,9 +74,9 @@ export default function Home() {
       </div>
 
       {selectedProduct && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50" onClick={() => setSelectedProduct(null)}>
-          <div className="bg-white mt-15 p-8 rounded-lg shadow-lg w-[300px] relative" onClick={(e) => e.stopPropagation()}>
-            <button className="absolute top-2 right-2 text-gray-600 hover:text-black" onClick={() => setSelectedProduct(null)}>
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4" onClick={() => setSelectedProduct(null)}>
+          <div className="bg-white p-8.5 rounded-lg shadow-lg mt-10 w-90 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2x1 h-190 max-h-[100vh] relative " onClick={(e) => e.stopPropagation()}>
+            <button className=" text-gray-400 hover:text-black" onClick={() => setSelectedProduct(null)}>
               x
             </button>
             <Image
@@ -85,24 +86,24 @@ export default function Home() {
               height={600}
               className="w-full h-auto object-cover rounded-md"
             />
-            <h2 className="text-x1 font-semibold mt-4">{selectedProduct.name}</h2>
+            <h2 className="text-2xl font-bold mt-4">{selectedProduct.name}</h2>
             <p className="text-gray-600 mb-2">R$ {selectedProduct.price.toFixed(2)}</p>
-            <p className="mt-4">{selectedProduct.description}</p>
+            <p className="mt-2 font-light">{selectedProduct.description}</p>
             <button
               onClick={() => handleAddToCart(selectedProduct)}
-              className="mt-2 bg-amber-700 text-white px-4 py-2 rounded-md w-full hover:bg-amber-800 transition"
+              className="mt-4 bg-amber-700 text-white px-4 py-2 rounded-md w-full hover:bg-amber-800 transition"
             >
-              Adicionar ao Carrinho
+              Adicionar à Sacola
             </button>
           </div>
         </div>
       )}
 
-     <section className="bg-gray-50 py-12 mt-12">
+     <section className="bg-gray-100 py-10 mt-5">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-medium mb-8">O que nossos clientes dizem </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 m-5">
             
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <Image
@@ -154,25 +155,55 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-gray-400 text-black py-5 mt-12">
-        <div className="container mx-auto text-center">
-          <h2 className="text-2xl font-semibold mb-4">Fale Conosco</h2>
-          <p className="mb-4">Rua Vieira Carvalho, 70, Centro - Rio de Janeiro, RJ</p>
-          <p className="mb-4">Telefone: (21) 1234-5678</p>
-          <p className="mb-4">Email: contato@koa.com.br</p>
+  <footer className="bg-gray-400 text-black py-3 mt-12">
+  <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
 
-          <div className="flex justify-center space-x-6 mt-4">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-black hover:text-amber-700">Instagram</a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-black hover:text-amber-700">Facebook</a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-black hover:text-amber-700">Twitter</a>
-          </div>
+    <div className="md:w-1/2 text-center md:text-left mb-6 md:mb-0">
+      <h2 className="text-3xl font-semibold mb-4 text-white">Inscreva-se para novidades</h2>
+      <p className="mb-4 text-white">Receba ofertas exclusivas e novidades diretamente no seu e-mail.</p>
+      <div className="flex flex-col sm:flex-row items-right gap-2">
+        <input 
+          type="email" 
+          placeholder="Digite seu e-mail" 
+          className="px-4 py-2 border border-gray-300 bg-white rounded-md w-full sm:w-auto"
+        />
+        <button className="bg-amber-700 text-white px-4 py-2 rounded-md hover:bg-amber-800 transition">
+          Inscrever-se
+        </button>
+      </div>
+    </div>
 
-          <p className="text-sm mt-6">© 2025 KOA. Todos os direitos reservados.</p>
-        </div>
-      </footer>
+    <div className="md:w-1/2 flex flex-col items-center md:items-end text-white text-center md:text-right">
+      <h2 className="text-2xl font-semibold mb-4">Fale Conosco</h2>
+      <p className="mb-2">Rua Vieira Carvalho, 70, Centro</p>
+      <p className="mb-2">Rio de Janeiro, RJ</p>
+      <p className="mb-2">Telefone: (21) 1234-5678</p>
+      <p className="mb-4">Email: contato@koa.com.br</p>
+    </div>
+  </div>
+  <div className="self-center flex justify-center">
+             <Image
+                        src="/images/koa-logo.png"
+                        alt="Imagem de Login"
+                        width={80}
+                        height={80}
+                        className="object-contain self-center"
+              />
+    </div>
 
+  <div className="text-center">
+    <div className="flex justify-center space-x-6">
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-500">Instagram</a>
+      <span className="text-white">|</span>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-500">Facebook</a>
+      <span className="text-white">|</span>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-500">Twitter</a>
+    </div>
+    <p className="text-sm mt-6">© 2025 KOA. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
-    </main>
+</main>
   );
 }
 

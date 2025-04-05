@@ -17,7 +17,7 @@ const CarrinhoPage = () => {
   }
 
   return (
-    <div className="container mx-auto p-15">
+    <div className="container mx-auto p-50">
       <h1 className="text-3xl font-normal bg-clip-text flex items-center gap-9 mb-7 mt-4">
         Sacola de Compras
      </h1>

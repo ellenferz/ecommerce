@@ -7,7 +7,7 @@ type CartItem = {
   price: number;
   description: string;
   image: string;
-  quantity: number;
+  quantity: number;v
 };
 
 type CartContextType = {
@@ -16,7 +16,7 @@ type CartContextType = {
   removeFromCart: (id: number) => void;
   updateQuantity: (id: number, quantity: number) => void;
   finalizePurchase: () => void;
-  calculateTotal: () => number;
+  calculateTotal: () => number;                                                             
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);

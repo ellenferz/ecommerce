@@ -5,7 +5,7 @@ const config = {
       "./components/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-      extend: {},
+      extend: {}
     },
     plugins: [],
   };
