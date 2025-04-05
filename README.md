@@ -27,7 +27,26 @@
 
 ## 📁 Estrutura de Pastas
 
-📦 src/ ┣ 📂app/ ┃ ┣ 📜page.tsx ┃ ┣ 📜layout.tsx ┃ ┣ 📂carrinho/ ┃ ┗ 📂login/ ┣ 📂components/ ┃ ┗ 📜Header.tsx ┣ 📂context/ ┃ ┣ 📜CartContext.tsx ┃ ┗ 📜AuthContext.tsx ┣ 📂data/ ┗ 📜global.css
+```bash
+📦 src/
+ ┣ 📂app/
+ ┃ ┣ 📂agradecimento/
+ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┣ 📂carrinho/
+ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┣ 📂checkout/
+ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┣ 📂login/
+ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┣ 📜layout.tsx
+ ┃ ┗ 📜page.tsx
+ ┣ 📂components/
+ ┃ ┗ 📜Header.tsx
+ ┣ 📂context/
+ ┃ ┣ 📜CartContext.tsx
+ ┃ ┗ 📜AuthContext.tsx
+ ┣ 📂data/
+ ┃ ┗ 📜products.ts
 
 ---
 
