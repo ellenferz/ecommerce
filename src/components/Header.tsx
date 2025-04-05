@@ -23,7 +23,6 @@ const Header: React.FC = () => {
     setShowProfileDropdown(false);
   };
 
-  // Fecha dropdown ao clicar fora
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -47,7 +46,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-red-500 text-white">
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
-        {/* Logo */}
+       
         <div>
           <Image
             src="/images/koa-logo.png"
@@ -58,11 +57,11 @@ const Header: React.FC = () => {
           />
         </div>
 
-        {/* Navegação */}
+        
         <div className="flex items-center gap-6 text-xl font-semibold relative">
           <Link href="/" className="hover:text-amber-100">Início</Link>
 
-          {/* Produtos com clique */}
+         
           <div ref={produtosRef} className="relative">
             <button
               onClick={() => setShowProdutosDropdown(!showProdutosDropdown)}
@@ -79,7 +78,7 @@ const Header: React.FC = () => {
             )}
           </div>
 
-          {/* Login ou Perfil */}
+          
           {!auth.user ? (
             <Link href="/login" className="hover:text-amber-100">Login</Link>
           ) : (
@@ -105,7 +104,7 @@ const Header: React.FC = () => {
             </div>
           )}
 
-          {/* Carrinho */}
+          
           <Link href="/carrinho" className="relative flex items-center hover:text-amber-100">
             <svg
               className="w-6 h-6"
