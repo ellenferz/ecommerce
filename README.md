@@ -2,8 +2,6 @@
 
 ✨ Loja virtual de skincare feita com Next.js, Tailwind e muito amor.
 
-![koa-banner](https://via.placeholder.com/1200x400?text=Banner+do+Projeto)
-
 ---
 
 ## 🚀 Tecnologias Utilizadas
@@ -14,12 +12,6 @@
 - Context API
 - React Hooks
 - Git + GitHub
-
----
-
-## 📸 Preview
-
-![preview](https://via.placeholder.com/600x400?text=Preview+do+Site)
 
 ---
 
@@ -46,6 +38,21 @@
  ┣ 📂context/
  ┃ ┣ 📜CartContext.tsx
  ┃ ┗ 📜AuthContext.tsx
+
+## 🚀 Como rodar o Projeto
+
+# 1. Clone o repositório
+git clone https://github.com/ellenferz/ecommerce.git
+
+# 2. Acesse a pasta do projeto
+cd ecommerce
+
+# 3. Instale as dependências
+npm install
+
+# 4. Inicie o servidor de desenvolvimento
+npm run dev
+
 
 
 
