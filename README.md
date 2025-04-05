@@ -1,51 +1,52 @@
-## 🛒 Meu E-commerce em Next.js
+# 🧴 Koa Skincare
 
-Este é um projeto de e-commerce desenvolvido com **Next.js, TypeScript e TailwindCSS**.
+✨ Loja virtual de skincare feita com Next.js, Tailwind e muito amor.
+
+![koa-banner](https://via.placeholder.com/1200x400?text=Banner+do+Projeto)
+
+---
 
 ## 🚀 Tecnologias Utilizadas
-- [Next.js 14](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [React Context API](https://react.dev/reference/react/useContext)
 
-## 📂 Estrutura do Projeto
-public/ 
-  ├── images/ 
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Context API
+- React Hooks
+- Git + GitHub
 
-src/
-  ├── app/                  
-  │   ├── layout.tsx       
-  │   ├── page.tsx          
-  │   ├── agradecimento/    
-  │   │   ├── page.tsx
-  │   ├── carrinho/         
-  │   │   ├── page.tsx
-  │   ├── checkout/         
-  │       ├── page.tsx
+---
 
-  ├── components/          
-  │   ├── Header.tsx        
+## 📸 Preview
 
-  ├── context/              
-  │   ├── CartContext.tsx   
+![preview](https://via.placeholder.com/600x400?text=Preview+do+Site)
 
-  ├── data/                 
-      ├── products.ts      
-      
-🚨Este projeto não usa uma API externa! Os produtos são carregados de um arquivo estático products.ts.
+---
 
-## 🛠️ Como Rodar o Projeto
-Siga os passos abaixo para rodar o projeto localmente:
+## 🛍️ Funcionalidades
 
-### 1️⃣ Clone o repositório  
-```sh
-git clone https://github.com/ellenferz/ecommerce.git
-cd ecommerce
+- [x] Página inicial com produtos em destaque  
+- [x] Página de login com autenticação simulada  
+- [x] Carrinho de compras com Context API  
+- [x] Menu dropdown de categorias  
+- [x] Layout responsivo  
 
-Se estiver usando npm: 
-npm install
-npm run dev
-http://localhost:3000
+---
+
+## 📁 Estrutura de Pastas
+
+```bash
+📦 src/
+ ┣ 📂app/
+ ┃ ┣ 📜page.tsx
+ ┃ ┣ 📜layout.tsx
+ ┃ ┗ 📂carrinho/
+ ┣ 📂components/
+ ┃ ┗ 📜Header.tsx
+ ┣ 📂context/
+ ┃ ┣ 📜CartContext.tsx
+ ┃ ┗ 📜AuthContext.tsx
+
 
 
 
